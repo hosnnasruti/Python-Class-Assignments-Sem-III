@@ -1,0 +1,32 @@
+def add_entry(d):
+    key = input("Enter a new key to add: ")
+    value = input("Enter its value: ")
+    d[key] = value
+def reassign_dict(d):
+    print("\n---Creating a completely new dictionaryinside the function---")
+    key = input("Enter a key for the new dict: ")
+    value = input("Enter its value: ")
+    d ={key: value}
+my_dict ={"name": "Alice"}
+print("Original dictionary: ", my_dict)
+
+print("\n---Testing add_entry---")
+add_entry(my_dict)
+print("Dictionary after add_entry:", my_dict)
+
+print("\n---Testing reassign_dict ---")
+reassign_dict(my_dict)
+print("Dictionary after reasign_dict:", my_dict)
+
+#Program Output
+#---Testing add_entry---
+#Enter a new key to add: Uttar Pradesh
+#Enter its value: 34
+#Dictionary after add_entry: {'name': 'Alice', 'Uttar Pradesh': '34'}
+#
+#---Testing reassign_dict ---
+#
+#---Creating a completely new dictionaryinside the function---
+#Enter a key for the new dict: Gorakhpur
+#Enter its value: 43
+#Dictionary after reasign_dict: {'name': 'Alice', 'Uttar Pradesh': '34'}
