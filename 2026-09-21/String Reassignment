@@ -1,0 +1,30 @@
+def change_string(s):
+    print("\n--Inside the function--")
+    try:
+        s[0] ='X'
+    except TypeError as e:
+        print(f"Error caught: {e}")
+        print("Reason: Python strings are immutable and cannot be changed in place.")
+original_string = input("Enter a string: ")
+print(f"\nOriginal string before a function call: '{original_string}'")
+change_string(original_string)
+print("\n---Outside the function---")
+print("Original string after function call: '{original_string}'")
+
+if original_string and original_string[0] == "X":
+    print("Result: The original string DID change.")
+else:
+    print("Result: The original string DID NOT change.")
+
+#Program Output
+#Enter a string: Hello Python
+#
+#Original string before a function call: 'Hello Python'
+#
+#--Inside the function--
+#Error caught: 'str' object does not support item assignment
+#Reason: Python strings are immutable and cannot be changed in place.
+#
+#---Outside the function---
+#Original string after function call: '{original_string}'
+#Result: The original string DID NOT change.
