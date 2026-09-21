@@ -1,0 +1,17 @@
+def find_maximum(num1, num2):
+    """
+    Takestwo numbers as input and returns the greater number.
+    """
+    if num1 > num2:
+        return num1
+    else:
+        return num2
+number1 = float(input("Enter first number: "))
+number2 = float(input("Enter second number: "))
+result = find_maximum(number1, number2)
+print("The maximum number is: ", result)
+
+#Program Output
+#Enter first number: 456
+#Enter second number: 548
+#The maximum number is:  548.0
