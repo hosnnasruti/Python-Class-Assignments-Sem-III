@@ -1,0 +1,16 @@
+def remove_last(lst):
+    """Removes the last element of the list in place."""
+    if lst:
+        lst.pop()
+
+user_input = input("Enter list elements separated by spaces: ")
+my_list = user_input.split()
+print(f"\nOriginal list before function call: {my_list}")
+remove_last(my_list)
+print(f"Original list after function call: {my_list}")
+
+#Program Output
+#Enter list elements separated by spaces: 89 89 76 43 2
+#
+#Original list before function call: ['89', '89', '76', '43', '2']
+#Original list after function call: ['89', '89', '76', '43']
