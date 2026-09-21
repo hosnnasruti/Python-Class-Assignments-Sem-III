@@ -1,0 +1,14 @@
+def calculate_factorial(n):
+    if n<0:
+        return "Factorial is not defined for negative numbers."
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+user_input = int(input("Enter an integer: "))
+output = calculate_factorial(user_input)
+print(f"The factorial of {user_input} is: {output}")
+
+#Program Output
+#Enter an integer: 7
+#The factorial of 7 is: 5040
