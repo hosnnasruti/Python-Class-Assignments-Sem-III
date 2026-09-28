@@ -1,0 +1,23 @@
+def countdown(n):
+    while n>=1 :
+        yield n
+        n -= 1
+try:
+    start_num = int(input("Enter a starting integer for countdown: "))
+    print("Countdown: ")
+    for number in countdown(start_num):
+        print(number)
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+
+#ProgramOutput
+#Enter a starting integer for countdown: 8
+#Countdown: 
+#8
+#7
+#6
+#5
+#4
+#3
+#2
+#1
