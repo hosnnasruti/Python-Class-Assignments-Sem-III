@@ -1,0 +1,27 @@
+def even_numbers(limit):
+    for i in range(0, limit + 1, 2):
+        yield i
+try:
+    user_limit = int(input("Enter a limit for even numbers: "))
+    print(f"Even numbers up to {user_limit}:")
+    for number in even_numbers(user_limit):
+        print(number)
+except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+
+#Programoutput
+#Enter a limit for even numbers: 25
+#Even numbers up to 25:
+#0
+#2
+#4
+#6
+#8
+#10
+#12
+#14
+#16
+#18
+#20
+#22
+#24
