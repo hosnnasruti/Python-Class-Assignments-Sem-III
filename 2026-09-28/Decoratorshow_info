@@ -1,0 +1,23 @@
+def show_info(func) :
+    def wrapper(*args, **kwargs):
+        print("Calling function...")
+        result = func(*args, **kwargs)
+        print("Function executed.")
+        return result
+    return wrapper
+@show_info
+def square(num):
+    return num**2
+
+try:
+    user_num = float(input("Enter a number to square: "))
+    print(f"Result: {square(user_num)}")
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
+
+
+#Output
+#Enter a number to square: 90
+#Calling function...
+#Function executed.
+#Result: 8100.0
